@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<style type="text/css">
+	.image-container{
+		max-width: 250px;
+		height: auto;
+	}
+	.field-heading{
+		color: var(--secondary-text-color);
+	}
+	.icon-container:hover {
+		opacity: 0.3;
+		cursor: pointer;
+	}
+	.friends-icon{
+		color: #4287f5;
+		font-size: 40px;
+	}
+	.person-add-icon{
+		color: #4287f5;
+		font-size: 40px;
+	}
+	.friend-text{
+		font-weight: 500;
+		color: black;
+	}
+	.friends-btn{
+		background-color: #cccccc;
+		border-color: #cccccc;
+		color: #000;
+		font-weight: 500;
+	}
+	.friends-btn:hover {
+		background-color: #bfbfbf;
+		border-color: #bfbfbf;
+	}
+	.dropdown-toggle::after { 
+		content: none; 
+	}
+	.card{
+		border-radius: 12px;
+	}
+	.material-icons{
+		font-size: 30px;
+	}
+	.material-icons:hover{
+		cursor: pointer;
+	}
+	.confirm-friend-request{
+		color: green;
+	}
+	.confirm-friend-request:hover {
+		opacity: 0.3;
+	}
+	.decline-friend-request:hover {
+		opacity: 0.3;
+	}
+	.decline-friend-request{
+		color: red;
+	}
+	.message-btn-text{
+		font-weight: 500;
+	}
+	body{
+		
+		font-family: "Segoe UI";
+		font-weight: 380;
+		background-image: url("C:/Users/User/Pictures/Saved Pictures/Image.jpg");
+		background-color: #cccccc;
+
+	}
+	
+</style>
+<div class="mainbgimg">
+<div class="container-fluid">
+	<div class="d-flex flex-row justify-content-center flex-wrap align-items-start">
+
+		<div class="card profile-card m-2">
+		  <div class="card-body">
+		  	<div class="d-flex flex-column justify-content-center p-4">
+			{% if request.user.is_authenticated %}
+			
+<div class="bgimg">
+		  		<p >WELCOME TO OUR WEBSITE!</p>
+			
+	
+		  			<h5>YOU CAN CHECK OUT YOUR ACCOUNT BY CLICKING THE TEXT "ACCOUNT" UP THERE</h5>
+		  			<h5>UPLOAD YOUR MRI SCAN BY CLICKING THE INK IN THE HEADEER ABOVE</h5>
+					<h5>YOU CAN UPDATYOUR ACCOUNT DETAILS BY CICKING ON ACCOUNT AND THEN CLICKING ON UPDATE </h5>
+					<h5>YOU CAN LOGOUT BY CLICKING LOGOUT TOOOOO</h5>
+					<h5>Please always reference a second opinion from a professional</h5>
+		  	{% else %}
+			  <p class="mt-4 mb-1 field-heading">You arent logged in/Registered yet...maybe do that first?</p>
+			  <p class="mt-4 mb-1 field-heading">The LINK for LOGGING IN  AND REGISTRATION are right up there in the right corner</p>
+			{% endif %}
+			</div>
+			</div>
+		  </div>
+		</div>
+
+		
+		<div class="d-flex flex-column mb-4">
+
+			
+
+		
+	</div>
+</div>
+</div>
+
+
+{% endblock content %}
